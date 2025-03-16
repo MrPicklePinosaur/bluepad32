@@ -9,5 +9,6 @@
 // Each arch needs to implement these functions
 
 void uni_console_init(void);
+void register_bluepad32(void);
 
 #endif  // UNI_CONSOLE_H

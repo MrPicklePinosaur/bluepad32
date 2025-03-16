@@ -41,10 +41,6 @@ int uni_init(int argc, const char** argv) {
     uni_bt_allowlist_init();
     uni_virtual_device_init();
 
-#if CONFIG_BLUEPAD32_USB_CONSOLE_ENABLE
-    uni_console_init();
-#endif  // CONFIG_BLUEPAD32_CONSOLE_ENABLE
-
     uni_balance_board_init();
 
     return 0;
