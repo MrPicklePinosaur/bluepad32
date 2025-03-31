@@ -317,8 +317,9 @@ void btstack_run_loop_trigger_exit(void){
 }
 
 void btstack_run_loop_execute_on_main_thread(btstack_context_callback_registration_t * callback_registration){
-    btstack_assert(the_run_loop != NULL);
-    btstack_assert(the_run_loop->execute_on_main_thread != NULL);
+    /* btstack_assert(the_run_loop != NULL); */
+    /* btstack_assert(the_run_loop->execute_on_main_thread != NULL); */
+    if (the_run_loop == NULL || the_run_loop->execute_on_main_thread == NULL) return;
     the_run_loop->execute_on_main_thread(callback_registration);
 }
 
